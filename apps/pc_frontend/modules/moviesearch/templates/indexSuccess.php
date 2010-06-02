@@ -3,11 +3,27 @@
 <title>youtube search</title>
 </head>
 <body>
-<p>
+<!--<p>
 <input type="text" id="query" />
 <input type="submit" value="search" onClick="onClick()"/>
-</p>
+</p>-->
+
+<div id="movieSerchFormLine" class="parts searchFormLine">
+<input type="text" id="query" />
+<input type="submit" value="search" onClick="onClick()"/>
+</div>
+
+<div class="parts">
+<div class="partsHeading"><h3>Movie Search</h3></div>
+
 <div id="result"></div>
+
+<div class="block">
+<div class="moreinfo">
+</div>
+</div>
+</div>
+</div>
 
 <script type="text/javascript">
 function onClick() {
