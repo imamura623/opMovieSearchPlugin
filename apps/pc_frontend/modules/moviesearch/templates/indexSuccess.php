@@ -18,10 +18,10 @@
 //
 // The Key Embedded in the following script tag is designed to work with
 // the following site:
-// http://picopicobitzz.com/
 -->
-<script src="http://www.google.com/uds/api?file=uds.js&v=1.0&source=uds-vsw&key=ABQIAAAANSkBraw9rhxsjOrkQW15IRTTRfCWr_LwY5LKw009d8Lkvr5JcBS8f-CYRBS_yHH-fdmJLOh7StaBSg"
-type="text/javascript"></script>
+<!--Google AJAX search api key の読み込み-->
+<?php use_javascript('http://www.google.com/uds/api?file=uds.js&v=1.0&source=uds-vsw&key='.$op_config['google_AJAX_search_api_key']) ?>
+
 <style type="text/css">
 @import url("http://www.google.com/uds/css/gsearch.css");
 </style>
@@ -38,9 +38,7 @@ type="text/javascript"></script>
 
 <script type="text/javascript">
 function LoadVideoSearchControl() {
-    var options = {
-twoRowMode : true
-    };
+    var options = { twoRowMode : true };
     var videoSearch = new GSvideoSearchControl(
             document.getElementById("videoControl"),
             [{ query : "blue angels"}, { query : "vw gti"}, { query : "osborne lights"}, { query : "tv ads"}], null, null, options);
