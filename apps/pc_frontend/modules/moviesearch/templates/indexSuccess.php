@@ -30,21 +30,49 @@
 <script type="text/javascript">
 window._uds_vsw_donotrepair = true;
 </script>
+
 <script src="http://www.google.com/uds/solutions/videosearch/gsvideosearch.js?mode=new"
 type="text/javascript"></script>
+
 <style type="text/css">
 @import url("http://www.google.com/uds/solutions/videosearch/gsvideosearch.css");
 </style>
 
 <script type="text/javascript">
-function LoadVideoSearchControl() {
-    var options = { twoRowMode : true };
-    var videoSearch = new GSvideoSearchControl(
-            document.getElementById("videoControl"),
-            [{ query : "blue angels"}, { query : "vw gti"}, { query : "osborne lights"}, { query : "tv ads"}], null, null, options);
-}
+var defaultTags = [
+        { query : 'paris hilton' },
+        { query : 'mtv' },
+        { query : 'jessica simpson', label : 'jessica' },
+        { query : 'vw gti' }
+    ];
+
+
+function LoadTags()
+    {    
+        return GSvideoSearchControl_JSON.stringify(defaultTags);
+    }    
+     
+
+function SaveTags(tags)
+    {
+        alert(tags);
+    }
+
+function OnLoad()
+    {
+        var container = document.getElementById('videoControl');
+        var options = { twoRowMode : true };
+        var videoSearchControl = new GSvideoSearchControl(
+                container,      // 検索コントロールを表示する要素
+                defaultTags,    // 既定の検索語の配列
+                LoadTags,       // タグ編集時に呼び出す関数
+                SaveTags,       // タグ保存時に呼び出す関数
+                options         // オプション
+                );
+    }
+
 // arrange for this function to be called during body.onload
 // event processing
-GSearch.setOnLoadCallback(LoadVideoSearchControl);
+GSearch.setOnLoadCallback(OnLoad);
 </script>
 <!-- --End Video Search Control Wizard Generated Code-- -->
