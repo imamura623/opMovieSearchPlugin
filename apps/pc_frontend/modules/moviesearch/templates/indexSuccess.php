@@ -1,4 +1,3 @@
-<!-- ++Begin Video Search Control Wizard Generated Code++ -->
 <!--
 // Created with a Google AJAX Search Wizard
 // http://code.google.com/apis/ajaxsearch/wizards.html
@@ -12,6 +11,9 @@
 <span style="color:#676767;font-size:11px;margin:10px;padding:4px;">Loading...</span>
 </div>
 
+<!--Google AJAX search api key の読み込み-->
+<?php use_javascript('http://www.google.com/uds/api?file=uds.js&v=1.0&source=uds-vsw&key='.$op_config['google_AJAX_search_api_key']) ?>
+
 <!-- Ajax Search Api and Stylesheet
 // Note: If you are already using the AJAX Search API, then do not include it
 //       or its stylesheet again
@@ -19,9 +21,6 @@
 // The Key Embedded in the following script tag is designed to work with
 // the following site:
 -->
-<!--Google AJAX search api key の読み込み-->
-<?php use_javascript('http://www.google.com/uds/api?file=uds.js&v=1.0&source=uds-vsw&key='.$op_config['google_AJAX_search_api_key']) ?>
-
 <style type="text/css">
 @import url("http://www.google.com/uds/css/gsearch.css");
 </style>
@@ -40,10 +39,10 @@ type="text/javascript"></script>
 
 <script type="text/javascript">
 var defaultTags = [
-        { query : 'paris hilton' },
+        { query : 'PicoBitzz' },
         { query : 'mtv' },
-        { query : 'jessica simpson', label : 'jessica' },
-        { query : 'vw gti' }
+        { query : 'primus' },
+        { query : 'super junky monky' }
     ];
 
 
@@ -75,4 +74,3 @@ function OnLoad()
 // event processing
 GSearch.setOnLoadCallback(OnLoad);
 </script>
-<!-- --End Video Search Control Wizard Generated Code-- -->
