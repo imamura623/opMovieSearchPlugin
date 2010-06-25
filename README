@@ -4,3 +4,15 @@ opMovieSearchPlugin
 【開発中】opMovieSearchPluginはGoogle Ajax Search APIを利用し、OpenPNEにYoutubeの検索結果を表示するPluginです。
 開発中ですのでご利用には十分に注意してください。
 問題が起きてもコチラは責任負いかねます。
+
+=== How to Use ===
+1.google AJAX search api keyを取得してください
+　→http://code.google.com/intl/ja/apis/ajaxsearch/signup.html
+
+2.OpenPNE管理画面のSNS設定画面のAPIキー設定ページにアクセスしてください
+
+3.Google AJAX search api keyの設定フォームに1.で取得したkeyを入力してください
+
+4.設定ができたらhttp://sns.example.com/moviesearchにアクセスしてください
+
+5.あとはお好きにどうぞ
