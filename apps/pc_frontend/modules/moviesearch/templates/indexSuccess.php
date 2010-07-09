@@ -74,3 +74,9 @@ function OnLoad()
 // event processing
 GSearch.setOnLoadCallback(OnLoad);
 </script>
+
+<!-- Activityだお -->
+<?php if ($op_config['is_allow_post_activity']): ?>
+<?php echo link_to(__('この動画について %activity% に投稿する'),
+'friend/showActivity?body='.urlencode('こんにちはこんにちは')); ?>
+<?php endif; ?>
